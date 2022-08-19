@@ -62,4 +62,15 @@ body {
 .block {
   height: 100%;
 }
+
+ @media (max-width:450px){
+ 
+    .wrapper{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+ 
+ }
 </style>
