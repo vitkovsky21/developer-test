@@ -29,6 +29,7 @@ export default {
 
       this.eventBus.on('emit', (args) => {
         console.log(args)
+
         if (this.products) {
           this.products.push(args)
           const parsed = JSON.stringify(this.products);
@@ -168,6 +169,30 @@ export default {
       margin: -1.1rem 1.5rem;
       font-size: 3.9rem;
       font-weight: bold;
+    }
+  }
+  .sortbox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+    position: relative;
+    margin: 4.4rem;
+    width: 163.49px;
+    height: 60px;
+    left: 83%;
+    background: #FFFEFB;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 15px;
+    color: #B4B4B4;
+  
+    &:hover {
+      cursor: pointer;
     }
   }
 }

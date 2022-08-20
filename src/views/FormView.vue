@@ -91,6 +91,12 @@ export default {
                              review: this.review,
                              image: this.url, 
                              price: this.number})
+                             
+
+        let [num] = this.products[0].price.match(/^(.*?)((?:[,.]\d+)?|)$/);
+        this.products[0].price = `${num.replace(/\B(?=(?:\d{3})*$)/g, ' ')}`;
+
+        console.log(this.products[0].price)
         this.eventBus.emit('emit', this.products[0])
         this.products = [];
       },
